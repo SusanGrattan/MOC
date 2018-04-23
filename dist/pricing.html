@@ -1,0 +1,133 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mt. Ogden CrossFit</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  </head>
+  <body>
+
+<div class="grid-container">
+  <header>
+    <div class="grid-x">
+      <div class="cell small-4 small-offset-4">
+        <img src="assets/img/MOC_3_greenblack_5x5.png" alt="Mt Ogden CrossFit Logo">
+      </div>
+    </div>
+<!-- Navigation -->
+<div class="cell small-12">
+  <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle=""></button>
+    <div class="title-bar-title">Menu</div>
+  </div>
+</div>
+
+<div class="small-12 cell">
+  <div class="top-bar" id="main-menu">
+    <ul class="menu top-bar-left" data-dropdown-menu>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="about.html#faq">F.A.Q.</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <ul class="menu top-bar-right">
+      <li><a href="signup.html" class="button">Sign Up</a></li>
+      <li><a href="" class="button secondary">Log In</a></li>
+    </ul>
+  </div>
+</div>
+
+  </header>
+</div>
+  <div class="grid-container">
+    <h2 class="text-center">Membership Pricing</h2>
+    <div class="grid-x grid-margin-x text-center">
+      <div class="cell small-12 medium-4 pricing-card">
+        <h3>Standard</h3>
+        <hr>
+        <ul>
+          <li class="price">$105<br>Monthly</li>
+          <li class="lighter-text">*Drop in: $25<br>Includes a t-shirt</li>
+          <li><a href="signup.html" class="button">Choose Me &amp; Sign Up</a></li>
+        </ul>
+      </div>
+      <div class="cell small-12 medium-4 div pricing-card">
+        <h3>Couples</h3>
+        <hr>
+        <ul>
+          <li class="price">$150<br>Monthly</li>
+          <li class="lighter-text">Payment must come<br>from single acount</li>
+          <li><a href="signup.html" class="button">Choose Me &amp; Sign Up</a></li>
+        </ul>
+      </div>
+      <div class="cell small-12 medium-4 div pricing-card">
+        <h3>Service/Student</h3>
+        <hr>
+        <ul>
+          <li class="price">$75<br>Monthly</li>
+          <li class="lighter-text">Teacher, student, fire,<br>police, and military.</li>
+          <li><a href="signup.html" class="button">Choose Me &amp; Sign Up</a></li>
+        </ul>
+      </div>
+      <div class="cell small-12">
+        <p class="text-center lighter-text double-line-height">*No contract. Ever.<br>Childcare is included in all memberships. See schedule for childcare times.</p>
+      </div>
+    </div>
+  </div>
+  
+
+  <footer>
+    <div class="grid-container">
+      <div class="grid-x map-container">
+        <div id="map" class="cell small-12">
+
+        </div>
+        <div class="cell small-12 medium-4 medium-offset-1 map-overlay">
+          <ul class="no-bullet text-center">
+            <li class="overlay-title">Mt. Ogden CrossFit</li>
+            <li><a href="">203 W. Oak Street<br>Ogden, UT 84403</address></a></li>
+            <li><a href="tel:+1-801-726-8025">801-726-8025</a></li>
+            <li><a href="">mtogdencrossfit@gmail.com</a></li>
+            <li>
+              <button class="button">Sign Up</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Google Maps API - Taken from Google -->
+  <script>
+
+      function initMap() {
+        var uluru = {lat: 41.227947, lng: -111.981621};
+        var screenWidth = screen.width;
+        var mapCenter;
+        if (screenWidth < 640) {
+          mapCenter = {lat: 41.227947, lng: -111.981621};
+        }  else {
+          mapCenter = {lat: 41.228094, lng: -111.982863};
+        };
+        console.log(screenWidth, mapCenter);
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: mapCenter
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3G9F8SFWdhk4NThnXXvAmFiEzk9ZtKd4&callback=initMap">
+    </script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
