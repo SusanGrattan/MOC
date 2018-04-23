@@ -1,0 +1,200 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+// @include foundation-grid;
+// @include foundation-flex-grid;
+//
+@include foundation-xy-grid-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+// @include foundation-float-classes;
+@include foundation-flex-classes;
+
+// @include foundation-prototype-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+
+// My styles
+
+// Colors
+$main-gray: #333333;
+
+h2 {
+  color: #222222;
+  margin-top: 30px
+}
+.lighter-text {
+  color: lighten(black, 50%);
+}
+.double-line-height {
+  line-height: 2em;
+}
+img {
+  width: 100%
+}
+/*  HEADER */
+header>div, .top-bar, .title-bar {
+  ul {
+    background-color: $main-gray;
+    &.top-bar-left li a{
+      color: white;
+      font-weight: bold;
+    }
+    &.top-bar-right {
+      font-weight: bold;
+      li a {
+        margin-right: 10px;
+      }
+    }
+  }
+  background-color: $main-gray;
+}
+/*  HOME PAGE */
+.orbit-image {
+  width: 100%;
+}
+.img-menu {
+  margin-top: 30px;
+}
+//  REVEIWS
+.orbit-slide>div.card {
+  height: 300px;
+}
+.review-image {
+  height: 75px;
+  width: 75px;
+  margin-right: 10px;
+}
+ul.stars {
+  text-align: center;
+  color: #ffff00;
+  font-size: 1.6em;
+  margin: 20px 5px;
+  li {
+    margin-left: 5px;
+    display: inline-block;
+  }
+}
+/*  PRICING PAGE */
+.pricing-card {
+  border: 3px solid black;
+  h3 {
+    margin-top: 20px;
+  }
+  hr {
+    width: 70%;
+    height: 2px;
+    background-color: black;
+  }
+  ul {
+    margin: 0;
+    list-style-type: none;
+    li {
+      margin-bottom: 20px;
+      &.price {
+        font-size: 1.3em;;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/*  SCHEDULE */
+td {
+  span {
+    margin-left: 20px;
+    font-weight: bold;
+  }
+}
+
+/*  ABOUT US */
+.accordion-title {
+  color: black;
+}
+
+/*  FOOTER */
+.auto-height {
+  height: inherit;
+}
+#map {
+  margin-top: 50px;
+  width: 100%;
+  height: 500px;
+}
+.map-overlay {
+  height: 400px;
+  background-color: white;
+  ul {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    li {
+      margin-bottom: 20px;
+      :last-child {
+        margin-bottom: 0;
+      }
+      a {
+        text-decoration: underline;
+        color: black;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.overlay-title {
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+/* Make the fancy stuff responsive */
+@media screen and (max-width: 640px) {
+  .pricing-card {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .map-overlay {
+    position: relative;
+    top: -450px;
+  }
+  .map-container {
+    height: 500px;
+  }
+}
